@@ -161,7 +161,7 @@ input.onkeyup = function (e) {
     const task = tasks[i];
     if (task.todo.toLowerCase().includes(filterText)) {
       let classForTask = task.completed ? "completed" : "not-completed";
-      taskItemsHTML = `<li class="${classForTask} ">${task.todo}</li>`;
+      taskItemsHTML += `<li class="${classForTask} ">${task.todo}</li>`;
     }
     if (e.target.value === "") {
       taskItemsHTML = "";
