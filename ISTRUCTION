@@ -1,0 +1,12 @@
+ESERCIZIO 1: 
+
+Usando JS, crea un elemento HTML per ognuna delle seguenti task: 
+L'elemento deve mostrare il testo della task ed avere un sfondo verde in caso sia completata, rosso se non lo e'. 
+
+ESERCIZIO 2: 
+
+Modificando il codice precedente, assicurati che solo le task NON completate siano mostrate sulla pagina. 
+
+ESERCIZIO 3: 
+
+Aggiungi un input che filtri le task in base alla proprieta' todo
