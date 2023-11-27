@@ -153,6 +153,7 @@ const taskNotCompleted = function () {
   taskContainer.innerHTML = taskItemsHTML;
 };
 taskNotCompleted();
+
 const input = document.querySelector(".input");
 
 // ! input.metodo
@@ -173,9 +174,10 @@ const input = document.querySelector(".input");
 // const taskContainer = document.querySelector(".filterTask");
 // taskContainer.innerHTML = taskItemsHTML;
 // };
+
 // !addEventListner
 
-searchTask = function (e) {
+const searchTask = function (e) {
   const filterText = e.target.value.toLowerCase();
   let taskItemsHTML = "";
   for (let i = 0; i < tasks.length; i++) {
@@ -191,6 +193,7 @@ searchTask = function (e) {
   const taskContainer = document.querySelector(".filterTask");
   taskContainer.innerHTML = taskItemsHTML;
 };
+
 input.addEventListener("change", function (e) {
   searchTask(e);
 });
