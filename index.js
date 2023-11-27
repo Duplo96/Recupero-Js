@@ -113,7 +113,7 @@ const tasks = [
   },
 ];
 
-// VISUALIZZIAMO TUTTE LE TASK E DIAMO UN COLORE DI SFONDO
+// * VISUALIZZIAMO TUTTE LE TASK E DIAMO UN COLORE DI SFONDO
 const displayTasks = function () {
   const taskContainer = document.querySelector(".tasksContainer");
   taskItemsHTML = "";
@@ -136,7 +136,8 @@ const displayTasks = function () {
 
 displayTasks();
 
-// VISUALIZZIAMO SOLO LE TASK NON COMPLETATE
+// * VISUALIZZIAMO SOLO LE TASK NON COMPLETATE
+
 const taskNotCompleted = function () {
   const taskContainer = document.querySelector(".tasksNotCompleted");
   taskItemsHTML = "";
@@ -154,7 +155,27 @@ const taskNotCompleted = function () {
 taskNotCompleted();
 const input = document.querySelector(".input");
 
-input.onkeyup = function (e) {
+// ! input.metodo
+
+// input.onkeyup = function (e) {
+//   const filterText = e.target.value.toLowerCase();
+//   let taskItemsHTML = "";
+//   for (let i = 0; i < tasks.length; i++) {
+//     const task = tasks[i];
+//     if (task.todo.toLowerCase().includes(filterText)) {
+//       let classForTask = task.completed ? "completed" : "not-completed";
+//       taskItemsHTML += `<li class="${classForTask} ">${task.todo}</li>`;
+//     }
+//     if (e.target.value === "") {
+//       taskItemsHTML = "";
+//     }
+//   }
+// const taskContainer = document.querySelector(".filterTask");
+// taskContainer.innerHTML = taskItemsHTML;
+// };
+// !addEventListner
+
+searchTask = function (e) {
   const filterText = e.target.value.toLowerCase();
   let taskItemsHTML = "";
   for (let i = 0; i < tasks.length; i++) {
@@ -170,3 +191,6 @@ input.onkeyup = function (e) {
   const taskContainer = document.querySelector(".filterTask");
   taskContainer.innerHTML = taskItemsHTML;
 };
+input.addEventListener("change", function (e) {
+  searchTask(e);
+});
